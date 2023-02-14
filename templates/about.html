@@ -1,0 +1,14 @@
+{% block title %}
+    Связатся со мной
+{% endblock %}
+{% extends 'main.html' %}
+{% block content %}
+    <h1>{% block title %} Comments {% endblock %}</h1>
+    <div style="width: 50%; margin: auto">
+        {% for i in story %}
+        <div style="padding: 10px; background-color: #EEE; margin: 20px">
+            <p style="font-size: 24px">{{ i }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

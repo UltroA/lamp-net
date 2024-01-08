@@ -11,6 +11,11 @@
         </title>
         <link rel="stylesheet" type="text/css" href="../static/css/style.css">
         <link rel="stylesheet" href="/static/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
@@ -22,28 +27,35 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                 <ul class="navbar-nav mr-auto">
 
-                {% block navA %}
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/">Домашняя<span class="sr-only">(current)</span></a>
-                  </li>
-                {% endblock %}
-                {% block navB %}
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/streets">Улицы<span class="sr-only"></span></a>
-                  </li>
-                {% endblock %}
-                {% block navC %}
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/people">Люди</a>
-                  </li>
-                {% endblock %}
-                {% block navD %}
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/acts/">Акт</a>
-                  </li>
-                {% endblock %}
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Информация
+                  </a>
+                  <ul class="dropdown-menu">
+                      {% block navA %}
+                        <li><a class="dropdown-item" href="/">Главная</a></li>
+                      {% endblock %}
+                        <li><hr class="dropdown-divider"></li>
+                      {% block navB %}
+                        <li><a class="dropdown-item" href="/bhis">История создания</a></li>
+                      {% endblock %}
+                      {% block navC %}
+                        <li><a class="dropdown-item" href="/streets">История застройки района</a></li>
+                      {% endblock %}
+                        <li><hr class="dropdown-divider"></li>
+                      {% block navD %}
+                        <li><a class="dropdown-item" href="/arch">Архитектор Л. Г. Агафонов</a></li>
+                      {% endblock %}
+                        <li><hr class="dropdown-divider"></li>
+                      {% block navE %}
+                        <li><a class="dropdown-item" href="/now">Лицей</a></li>
+                      {% endblock %}
+                  </ul>
+                </li>
+
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                 </form>

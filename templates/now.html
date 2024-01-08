@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% block navE %}
+    <li class="nav-item">
+        <li><a class="dropdown-item active" href="#">Лицей</a></li>
+    </li>
+{% endblock %}
+{% block content %}
+    <div style="width: 70%; height: 70%; margin: auto">
+        {% for comment in comments %}
+            <div style="padding: 10px; background-color: #EEE; margin: 20px">
+                    {% if comment[2] %}
+                        <img src={{ comment[2] }} style="margin:auto;width:60%;height:60%;">
+                    {% else %}
+                    {% endif %}
+                    <h1 style="font-size: 24px">{{ comment[0] }}</h1>
+                    <p>{{ comment[1] }}</p>
+                </div>
+        {% endfor %}
+        <a class="btn btn-primary" href="https://ntl38.ru" role="button">Больше информации на сайте Лицея</a>
+    </div>
+{% endblock %}
+
